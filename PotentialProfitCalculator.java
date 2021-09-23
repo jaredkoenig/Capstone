@@ -12,7 +12,7 @@ import javax.swing.JLabel;
 import javax.swing.JButton;
 
 public class PotentialProfitCalculator {
-	static JFrame f = new JFrame("Practice");
+	static JFrame f = new JFrame("Potential Profit Calculator");
 	static JPanel panel = new JPanel();
 
 	public static void main(String[] args)
