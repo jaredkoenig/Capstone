@@ -12,11 +12,9 @@ import javax.swing.JPanel;
 import javax.swing.JLabel;
 import javax.swing.JButton;
 
-public class StablecoinCompoundCalculator {
-
+public class OneClickStablecoinCompoundCalculator {
 	static JFrame f = new JFrame("Stablecoin Compound Interest Calculator");
 	static JPanel panel = new JPanel();
-	static int year = 1;
 
 	public static void main(String[] args) {
 		f.setVisible(true);
@@ -41,29 +39,13 @@ public class StablecoinCompoundCalculator {
 		JTextField cryptoInterestText = new JTextField();
 		panel.add(cryptoInterestText);
 
-		JLabel buttonLabel = new JLabel("Click the button to perform the calculation once (simple interest)");
+		JLabel buttonLabel = new JLabel("Please enter the amount of years you would like to compound");
 		panel.add(buttonLabel);
 
-		JButton button = new JButton("Calculate simple interest");
-		button.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				try {
-					double staked = Double.parseDouble(cryptoStakedText.getText());
-					double interest = Double.parseDouble(cryptoInterestText.getText());
+		JTextField cryptoYearsText = new JTextField();
+		panel.add(cryptoYearsText);
 
-					double totalGain = (staked) + (staked * interest / 100.0);
-					totalGain = Math.floor(totalGain * 100) / 100;
-
-					buttonLabel.setText("Your stablecoin will be worth $" + totalGain + " after 1 year");
-				} catch (Exception ex) {
-					buttonLabel.setText("Invalid input");
-					System.out.println(ex);
-				}
-			}
-		});
-		panel.add(button);
-
-		JLabel button2Label = new JLabel("Click the button to perform the calculation once (compound interest)");
+		JLabel button2Label = new JLabel("Click the button to perform the compound interest calculation");
 		panel.add(button2Label);
 
 		JButton button2 = new JButton("Calculate compound interest");
@@ -73,16 +55,21 @@ public class StablecoinCompoundCalculator {
 					double staked = Double.parseDouble(cryptoStakedText.getText());
 					double interest = Double.parseDouble(cryptoInterestText.getText());
 
-					double totalGain = (staked) + (staked * interest / 100.0);
-					totalGain = Math.floor(totalGain * 100) / 100;
+					double totalGain = staked;
+					int years = Integer.parseInt(cryptoYearsText.getText());
 					
-					button2Label
-							.setText("Your stablecoin will be worth $" + totalGain + " after " + year + " year(s).");
-					year++;
+					for(int i=0; i<years; i++)
+					{
+						totalGain = (staked) + (staked * interest / 100.0);
+						totalGain = Math.floor(totalGain * 100) / 100;
+						staked = totalGain;
+					}
 
-					cryptoStakedText.setText(totalGain + "");
+					button2Label
+							.setText("Your stablecoin will be worth $" + totalGain + " after " + years + " year(s).");
+					
 				} catch (Exception ex) {
-					buttonLabel.setText("Invalid input");
+					button2Label.setText("Invalid input");
 					System.out.println(ex);
 				}
 			}
