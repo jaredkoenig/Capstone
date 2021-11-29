@@ -14,8 +14,28 @@ import javax.swing.JSlider;
 import javax.swing.JLabel;
 import javax.swing.JButton;
 
+/**
+ * @author Jared Koenig
+ * 
+ *	Welcome to CryptoCalculator! CryptoCalculator is an aggregation of
+ *	complex calculators related to making money with cryptocurrency.
+ *	There is a potential profit calculator which helps users to determine
+ *	possible profits/losses based on predictions of possible outcomes.
+ *	There is a stablecoin multi click calculator that determines profits
+ *	from stablecoin investments year by year. There is a stablecoin single
+ *	Click calculator that instantly calculates many years of compound interest
+ *	with one click. There is a required to stake calculator that tells a user
+ *	how much is required to stake of a given cryptocurrency to make X amount per
+ *	day, week, month, and/or year. Conversely, there is a staked earnings calculator,
+ *	which tells the user how much of a given cryptocurrency is being made based on how
+ *	much is already staked per day, week, month, and/or year. There is a risk adjustment
+ *	slider which helps a potential investor prepare to invest based on a cost/benefit
+ *	analysis. Finally, there is a price predictor that uses past trends of a given
+ *	cryptocurrency to predict the potential future price of any given cryptocurrency.
+ */
+
 public class CryptoCalculator {
-	static JFrame f = new JFrame("Required to Stake Calculator");
+	static JFrame f = new JFrame("Welcome to CryptoCalculator!");
 	static JPanel panel = new JPanel();
 	static int year = 1;
 
@@ -385,7 +405,7 @@ public class CryptoCalculator {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				JFrame frame = new JFrame("Required to Stake Calculator");
+				JFrame frame = new JFrame("Staked Earnings Calculator");
 				JPanel panel = new JPanel();
 
 				frame.setVisible(true);
@@ -593,7 +613,7 @@ public class CryptoCalculator {
 
 		JButton predictor = new JButton("Price Predictor");
 		predictor.addActionListener(new ActionListener() {
-			JFrame frame = new JFrame("Potential Profit Calculator");
+			JFrame frame = new JFrame("Price Predictor");
 			JPanel panel = new JPanel();
 
 			@Override

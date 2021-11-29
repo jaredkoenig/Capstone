@@ -11,18 +11,27 @@ import javax.swing.JPanel;
 import javax.swing.JLabel;
 import javax.swing.JButton;
 
+/**
+ * @author Jared Koenig
+ *
+ *	This is a staked earnings calculator,
+ *	which tells the user how much of a given
+ *	cryptocurrency is being made per day, week,
+ *	month, and/or year based on how much is already staked.
+ */
+
 public class StakedEarningsCalculator {
 
-	static JFrame f = new JFrame("Required to Stake Calculator");
+	static JFrame frame = new JFrame("Required to Stake Calculator");
 	static JPanel panel = new JPanel();
 
 	public static void main(String[] args) {
-		f.setVisible(true);
-		f.setLocation(300, 100);
-		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setVisible(true);
+		frame.setLocation(300, 100);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		GridLayout grid = new GridLayout(6, 2);
-		f.setContentPane(panel);
+		frame.setContentPane(panel);
 
 		panel.setLayout(grid);
 		panel.setBackground(Color.CYAN);
@@ -115,8 +124,8 @@ public class StakedEarningsCalculator {
 		});
 		panel.add(button);
 
-		f.pack();
-		f.setSize(1000, 500);
+		frame.pack();
+		frame.setSize(1000, 500);
 
 	}
 

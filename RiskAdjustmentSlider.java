@@ -12,6 +12,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Hashtable;
 
+/**
+ * @author Jared Koenig
+ *
+ *	This is a risk adjustment slider which helps
+ *	a potential investor prepare to invest based
+ *	on a cost/benefit analysis.
+ */
+
 public class RiskAdjustmentSlider {
 
 	public static void main(String[] args) {

@@ -11,18 +11,25 @@ import javax.swing.JPanel;
 import javax.swing.JLabel;
 import javax.swing.JButton;
 
+/**
+ * @author Jared Koenig
+ *
+ *	The potential profit calculator helps users to determine
+ *	possible profits/losses based on predictions of possible outcomes.
+ */
+
 public class PotentialProfitCalculator {
-	static JFrame f = new JFrame("Potential Profit Calculator");
+	static JFrame frame = new JFrame("Potential Profit Calculator");
 	static JPanel panel = new JPanel();
 
 	public static void main(String[] args)
 	{
-		f.setVisible(true);
-		f.setLocation(300, 100);
-		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setVisible(true);
+		frame.setLocation(300, 100);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		GridLayout grid = new GridLayout(6,2);
-		f.setContentPane(panel);
+		frame.setContentPane(panel);
 		
         panel.setLayout(grid);
         panel.setBackground(Color.CYAN);
@@ -33,7 +40,7 @@ public class PotentialProfitCalculator {
         JTextField cryptoNameText = new JTextField();
         panel.add(cryptoNameText);
         
-        JLabel cryptoPrice = new JLabel("Please enter the price the cryptocurrency was bought at");
+        JLabel cryptoPrice = new JLabel("Please enter the current price of the cryptocurrency");
         panel.add(cryptoPrice);
         
         JTextField cryptoPriceText = new JTextField();
@@ -83,8 +90,8 @@ public class PotentialProfitCalculator {
         });
         panel.add(button);
 
-		f.pack();
-		f.setSize(800, 500);
+		frame.pack();
+		frame.setSize(800, 500);
         
 
 	}

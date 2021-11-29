@@ -11,6 +11,16 @@ import javax.swing.JPanel;
 import javax.swing.JLabel;
 import javax.swing.JButton;
 
+/**
+ * @author Jared Koenig
+ *
+ *	This program is a price predictor that uses past trends of a given
+ *	cryptocurrency to predict the potential future price of any given cryptocurrency.
+ *	The price predictor uses the 6 month, 3 month, 1 month, 1 week, and 1 day percentage
+ *	changes to predict the future price percentage change. The number calculated is
+ *	only a prediction, and not a guarantee of any price change.
+ */
+
 public class PricePredictor {
 
 	static JFrame frame = new JFrame("Potential Profit Calculator");

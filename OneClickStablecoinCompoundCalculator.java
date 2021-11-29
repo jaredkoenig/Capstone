@@ -12,17 +12,26 @@ import javax.swing.JPanel;
 import javax.swing.JLabel;
 import javax.swing.JButton;
 
+/**
+ * @author Jared Koenig
+ *
+ *	There is a stablecoin single click calculator that
+ *	instantly calculates many years of compound interest
+ *	with one click. This is especially useful for people
+ *	planning to retire based on interest earned.
+ */
+
 public class OneClickStablecoinCompoundCalculator {
-	static JFrame f = new JFrame("Stablecoin Compound Interest Calculator");
+	static JFrame frame = new JFrame("Stablecoin Compound Interest Calculator");
 	static JPanel panel = new JPanel();
 
 	public static void main(String[] args) {
-		f.setVisible(true);
-		f.setLocation(300, 100);
-		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setVisible(true);
+		frame.setLocation(300, 100);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		GridLayout grid = new GridLayout(4, 2);
-		f.setContentPane(panel);
+		frame.setContentPane(panel);
 
 		panel.setLayout(grid);
 		panel.setBackground(Color.CYAN);
@@ -76,8 +85,8 @@ public class OneClickStablecoinCompoundCalculator {
 		});
 		panel.add(button2);
 
-		f.pack();
-		f.setSize(800, 500);
+		frame.pack();
+		frame.setSize(1000, 500);
 
 	}
 }

@@ -12,19 +12,26 @@ import javax.swing.JPanel;
 import javax.swing.JLabel;
 import javax.swing.JButton;
 
+/**
+ * @author Jared Koenig
+ *
+ *	The stablecoin multi click calculator determines profits
+ *	from stablecoin investments year by year, click by click.
+ */
+
 public class StablecoinCompoundCalculator {
 
-	static JFrame f = new JFrame("Stablecoin Compound Interest Calculator");
+	static JFrame frame = new JFrame("Stablecoin Compound Interest Calculator");
 	static JPanel panel = new JPanel();
 	static int year = 1;
 
 	public static void main(String[] args) {
-		f.setVisible(true);
-		f.setLocation(300, 100);
-		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setVisible(true);
+		frame.setLocation(300, 100);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		GridLayout grid = new GridLayout(4, 2);
-		f.setContentPane(panel);
+		frame.setContentPane(panel);
 
 		panel.setLayout(grid);
 		panel.setBackground(Color.CYAN);
@@ -89,8 +96,8 @@ public class StablecoinCompoundCalculator {
 		});
 		panel.add(button2);
 
-		f.pack();
-		f.setSize(800, 500);
+		frame.pack();
+		frame.setSize(1000, 500);
 
 	}
 }
